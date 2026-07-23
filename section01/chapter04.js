@@ -1,49 +1,40 @@
-// 1. Number Type 
-let num1 = 27; 
-let num2 = 4; 
-let num3 = -20; 
-console.log(num1 + num2);  
-console.log(num1 - num2);  
-console.log(num1 * num2);  
-console.log(num1 / num2);  
-console.log(num1 % num2);   
-//나머지연산(모듈러 연산) 
-let inf = Infinity; 
-let mInf = -Infinity; 
-let nan = NaN;
-let string = "hello";
-console.log(1 + string);   //1hello       
-console.log(1 * string);   //NaN    
-//수치연산이 실패했을 때 나타남  console.log(1 * “hello”);
-
-// 2. String Type 
-let myName = "홍길동"; 
-let myLocation = "석촌"; 
-let introduce = myName + myLocation;
-console.log(introduce)
-
-//3, 템플릿 리터널 문법(주의: ` 백틱에서 진행해야 한다) 
-let introduceText = `${myName}은 ${myLocation}에 거주합니다`; 
-console.log(introduceText);
-
-//4. Boolean Type 
-let isSwitchOn = true; 
-let isEmpty = false;
-
-//5. Null Type (아무것도 없다) 
-let empty = null;
+// 1. 묵시적 형 변환 
+//자바스크립트 엔진이 알아서 형 변환 
  
-//6. Undefined Type 
-let none; 
-console.log(none);
+let num = 10; 
+let str = "20"; 
+ 
+const result = num + str; 
+console.log(result);   //1020
+ 
+let numberA = 12;  
+let numberB = "2";  
+console.log(numberA * numberB);  //24 
 
+let numberA3 = 12;  
+let numberB3 = "2a";  
+console.log(numberA3 * numberB3);  //NaN 
+ 
+let numberA2 = 12;  
+let numberB2 = "2";  
+console.log(numberA2 + numberB2);  //”122” 
 
+// 2. 명시적 형 변환 
+//프로그래머가 내장함수 등을 이용해서 직접 형 변환을 명시 
+//문자열 -> 숫자 
+let str1 = "10"; 
+let strToNum1 = Number(str1); 
+console.log(10 + strToNum1);  //20 출력 
+ 
+let str2 = "10개"; 
+let strToNum2 = Number(str2);  // NaN 출력이된다. 이럴때는 parseInt() 
+console.log(strToNum2)
 
+// 사용할것  
+let strToNum3 = parseInt(str2); 
+console.log( strToNum3);  //10 출력 
 
-
-
-
-
-
-
-
+//숫자 -> 문자열 
+let num1 = 20; 
+let numToStr1 = String(num1); 
+console.log(numToStr1 + "입니다");  //20입니다 
