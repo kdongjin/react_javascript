@@ -80,7 +80,7 @@ console.log(arr2[index3])
 let index4 = arr2.findIndex((e)=>{ return e.color === "white"})
 console.log(arr2[index4])
 
-// 6 배열에서 찾고자 하는 객체를 찾아서 해당된 객체를 리턴
+// 6 find 배열에서 찾고자 하는 객체를 찾아서 해당된 객체를 리턴
 const arr3 = [
   {color: "red"},
   {color: "blue"},
@@ -100,7 +100,7 @@ console.log(findObject || "찾는객체가 없습니다.")
 const findObject2 = arr3.find((e, index, arr)=>{ return e.color === "white"})
 console.log(findObject2 || "찾는객체가 없습니다.")
 
-//7 배열에서 조건에 맞는객체를 필터링에서 리턴
+//7 배열에서 조건에 맞는객체를 필터링에서 리턴 filter
 let arr4 = [ 
 { name: "구길동", hobby: "테니스" }, 
 { name: "저길동", hobby: "테니스" }, 
