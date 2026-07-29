@@ -4,10 +4,13 @@
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/test/test2/index2.js"
+    "start": "node src/index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "randomcolor": "^0.6.2"
   }
 }
